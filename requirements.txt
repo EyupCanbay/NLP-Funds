@@ -1,0 +1,10 @@
+python == 3.12.9
+tenserflow ==2.18.0 
+textblob ==
+spacy == 3.8.4 
+gensim == 4.3.3 
+transformers == 4.48.3  
+openia == 1.61.1 
+tf-keras == 2.18.0
+textblob == 0.19.0
+beautifulsoup4-4.13.3 

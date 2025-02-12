@@ -1,0 +1,12 @@
+Veri Temizleme Adımları 
+    Boşlukların Temizlenmesi
+    Büyük-Küçük Harf Dönüşümleri
+    Noktalama Işaretlerinin Kaldırılması
+    Özel Karakterlerin Kaldırılması
+    Yazım Hatalarının Düzeltilmesi
+    HTML ve URL Temizlenmesi
+    
+Tokenization
+    Bir metni daha küçük parçalara ayırma işlemidir.
+    Bu küçük parçalar genellikle "token" olarak adlandırılır.
+    Tokenlar; kelimeler, cümleler veya hatta karakterler olabilir.
