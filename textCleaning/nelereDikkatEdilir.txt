@@ -10,3 +10,18 @@ Tokenization
     Bir metni daha küçük parçalara ayırma işlemidir.
     Bu küçük parçalar genellikle "token" olarak adlandırılır.
     Tokenlar; kelimeler, cümleler veya hatta karakterler olabilir.
+
+Kök ve Gövde Analizi
+    Staming(kök bulma)
+        kelimenin en basit yalın halini bulmayı amaçlar
+
+    Lammatization(gövdeleme)
+        Kelimenin anlamını ve dilgisel yapısını dikkate alarak doğru kökü bulmaya çalışır
+        bu işşlem sonrası dil bilgisi kuralına göre doğru anlamlı ve sözlükte yer alan kelimeler ortaya cıkar
+        
+Stop Words 
+    Durdurma kelimeleri (stop words), metinlerde genellikle anlamı çok az olan veya metnin analizi sırasında çok faydalı olmayan kelimelerdir.
+    Bu kelimeler genellikle bağlaçlar, edatlar, zamirler ve diğer dil bilgisel işlevi olan kelimelerdir.
+    Metin işleme süreçlerinde bu kelimeleri kaldırmak, analizlerin doğruluğunu artırabilir ve metin üzerinde daha anlamlı sonuçlar elde edilmesine yardımcı olabilir.
+    Örnekler:
+    Türkçe Stop Words: ve, bir, bu, ile, da, de, mi, o, çok, gibi
