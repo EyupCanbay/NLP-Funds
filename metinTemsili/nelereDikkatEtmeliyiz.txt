@@ -12,5 +12,12 @@ Bag of Words (BoW)
         Kelime kömesi oluşturma
         Kelime frekansını hesaplama
         Vektör temsili yapılır
-    
+    kelimelerin belge içerisinde ne kadar sık oldupunu belirllemek için kullanılır
+
+TF-IDF 
+    TF
+        kelimelerin belge içerisinde ne kadar önemli oldupunu belirllemek için kullanılır
+        daha sık görülen kelimeleri daha önemli olduğnu var saymaktadır
+    IDF 
+        bir kelimenin tüm belgelerdeki yagınlığını ölcer bir kelime cok belgede geciyorsa  o kelime cok fazla bilg sağlamaz
 
