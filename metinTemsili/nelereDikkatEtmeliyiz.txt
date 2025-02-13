@@ -21,3 +21,15 @@ TF-IDF
     IDF 
         bir kelimenin tüm belgelerdeki yagınlığını ölcer bir kelime cok belgede geciyorsa  o kelime cok fazla bilg sağlamaz
 
+N-GRAM 
+    bir dil modelinde kullanılan kelime veya karakter dizisinin uzunlupunu belirten bir teridir
+    N-GRAM MODELLERİ
+        metinleri n kelimelik veya n karakterlik kısımlara bölerek analiz eder
+    N GRAM MODELLERİ KULLANIM ALANLARI
+        metin modelleme
+        metin sınıflandırma
+        metin üretimi
+        metin benzerliği
+        
+    
+
