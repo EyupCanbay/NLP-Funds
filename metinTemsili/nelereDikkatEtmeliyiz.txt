@@ -1,0 +1,16 @@
+Metin Temsili
+    Metinlerin sayısallaştırılması için yapılır
+    Metinleri bilgisayarların anlayabilmesi için yapılır
+    Öznitelik çıkartmak için 
+    MOdel eğitimi için (Derin öğrenme ve makina öğrenmesi içinsayısal veriler lazım)
+    Metinleri sayısallaştırarak vektör cıakrtma işlemidir
+
+Bag of Words (BoW)
+    doğal dil işleme ve metin madenciliğinde kullanılan temel bir metin temsili yöntemidir
+    Bow metindeki kelimeleri sayısal veriye dönüştürür ve metinlerin analizini sağlar
+    İşleyişi
+        Kelime kömesi oluşturma
+        Kelime frekansını hesaplama
+        Vektör temsili yapılır
+    
+
