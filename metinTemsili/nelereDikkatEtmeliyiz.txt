@@ -31,5 +31,20 @@ N-GRAM
         metin üretimi
         metin benzerliği
         
-    
+Word Embeding (kelime gömme işlemi)
+    NLP ve ML de kullanılır
+    kelimeleri genelde sürekli bir vektör uzayında anlamlı temsil edecek şekilde sayısal vektöre dönüştürür
+    bu temsiller kelimeler arasında anlamsalve dilbilgisel ilişkiler yakalamayı hedefler
+    Word embeding Özellikleri
+        anlamsal benzerlik yakalar
+        matematiksel işlemlerle ifade edilir
+        sayısallaştırdığım metinler arasında geçişler yapailiyorum
+        kapsamlılık = gellikle büyük verikümesine dayanarak eğitilir dildeki çeşitli ilişkileri yakalama acısından önemli bir yöntemleri 
+    Word Embeding MODELLERİ
+       "Word Embeddings Modelleri" başlığı altında üç popüler kelime gömme (word embedding) modeli açıklanıyor:
+        
+        1- Word2Vec – Google tarafından geliştirilmiş, kelimeleri vektörlere dönüştüren bir model.
+        2- GloVe (Global Vectors for Word Representation) – Stanford Üniversitesi tarafından geliştirilmiş, kelime ilişkilerini vektörler aracılığıyla yakalayan bir model.
+        3- FastText – Facebook tarafından geliştirilmiş, kelimeleri alt-birimlerine bölerek daha iyi kelime gömme (embedding) yapan bir model.
+        Bu modeller doğal dil işleme (NLP) alanında, metinleri sayısal hale getirmek için kullanılır. Özellikle büyük veri kümeleriyle çalışırken kelimeler arasındaki anlam ilişkilerini yakalamakta etkilidirler.
 
