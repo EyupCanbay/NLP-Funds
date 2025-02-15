@@ -1,0 +1,23 @@
+olasılıksal dil modeller
+    -NGram modelleri
+    -gizli markov modeller (hidden markov models- MHH)
+    -maximum entropt modelleri (MaxEnt)
+
+N-Gram modelleri
+    n gram modelleri bir dizideki ardışık kelime veya karakter gruplarının olasılıklarını tahmin eder
+    unigram bigram trigram zaten biliyorsun
+    kullanım
+        N-Gramlar bir çümledeki bir kelimenin hangi olasılıkla diğer bir kelimedek sonra geleceğini tahmin etmek için kullanılır
+    avantajları
+        basit ve hızlıdırlar
+        yerel bağıntılarını iyi yakalarlar
+    dezavanlajları
+        bağlamları sınırlıdır n sayısı arttıkca model yavaş calışıyor 
+        veri geneksinimi (yüksek n değerleri yüksek verilere ihtiyac duyar)
+        
+
+    
+
+
+
+
