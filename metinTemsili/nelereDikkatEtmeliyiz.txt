@@ -48,3 +48,84 @@ Word Embeding (kelime gömme işlemi)
         3- FastText – Facebook tarafından geliştirilmiş, kelimeleri alt-birimlerine bölerek daha iyi kelime gömme (embedding) yapan bir model.
         Bu modeller doğal dil işleme (NLP) alanında, metinleri sayısal hale getirmek için kullanılır. Özellikle büyük veri kümeleriyle çalışırken kelimeler arasındaki anlam ilişkilerini yakalamakta etkilidirler.
 
+Transformers Tabanlı Metin Temsili
+    -Transformers
+        up uzun metinlerdeki bağlamı cok daha kolay anlayabiliyoruz
+        Neden Transformers
+            Bağlamı daha iyi anlar RNN (recurening noral network), LSTM(LONG ŞORT TERM MEMORY)  lere göre bu tür ilişkileri anlamak daha iyidir
+            Paralel işleme yeteneği yapabiliyor (sekans verilerini paralel olarak işler)
+            Çeşitli NLP görevlerinde kulanılabilir
+            Önceden eğitlmiş modelleri yeniden kullanımı (Transfer learning yapabiliyoruz ve finetuning yapabiliyourz(ince ayar) Büyük veri kümesin eerişimimiz ykoksa bile güzel şeyler cıkabilir)
+        En bilindik Transformers modelleri
+            BERT =>  metinlerin iki yönü bağlamını anlamak için geliştirilmiştir hem ön hem arka kelimeleri dikkate açıklanıyor 
+                Metin sınıflandırma
+                Adlandırılmış varlık tanıma
+                soru  yantlama
+            GPT =>  dil modeli olarak geliştirilmiştir 
+                verieri bir başlangıc metninden yeni metinler üretmede oldukça başarılıdır
+                tek yönlüdür yni uni directional
+                metni soldan sağa doğru işler bir kelime tahmin ederken öneki kelimeye bakarak etkilidirler
+    -Atention = modelin belirli girdi parçalarına farklı derecelerde gösterilmesine olanak tanir
+        Özellikle bir kelimenin diğer kelimelerle ilişkisini anlamak için kullanılır
+    -İnput embedding = girdi verilerini modelin işleyeceği formata dönüştüren bir tekniktir
+    -Multi-head attention = attention mekanizmasının birden fazla başlıkla çalıştığı tekniktir
+    -Masked multi head attention = modelin gelecekteli kelimelri görmesini engeller, yani model sadece geçmişteki verileri kullanarak tahminde bulunurir
+    -Add&Norm = bir katman cıkti işe girdi arasındaki kısa yolu (residual connection) ekleyip ardından layer normalizasyon uygulayan adımdır
+    -Feed-Forward Network
+        Her encoder ve decoder katmanında bulunan bir ağdır.
+        Genellikle iki lineer dönüşüm ve bir aktivasyon fonksiyonundan oluşur.
+    -Output Embedding
+        Modelin çıktısını temsil eden bir tekniktir.
+        Gellikle dil modellerinde kullanılır.
+
+
+
+
+
+Metin Temsili Yöntemlerinin Karşılaştırılması
+Metin madenciliği ve doğal dil işleme (NLP) alanında farklı metin temsili yöntemleri kullanılır. İşte en yaygın metin temsili yöntemleri, temel özellikleri, kullanım kolaylıkları ve başarı durumlarıyla birlikte:
+
+1. Bag of Words (BoW)
+    Temel Özellikler:
+        Kelime frekanslarına dayalı olarak çalışır.
+        Belirli bir metindeki kelimelerin sıklığını kullanarak matrisler oluşturur.
+    Kullanım Kolaylığı:
+        Basittir ve doğrudan uygulanabilir.
+    Sonuçların Başarı Durumu:
+        Genellikle düşük başarı gösterir.
+        Bağlam bilgisinden yoksundur, kelimeler arasındaki ilişkileri anlamaz.
+2. TF-IDF (Term Frequency - Inverse Document Frequency)
+    Temel Özellikler:
+        Kelimenin sıklığını ölçerken aynı zamanda belgelerdeki önemini değerlendirir.
+    Kullanım Kolaylığı:
+        Kolaydır, birçok standart kütüphane mevcuttur.
+    Sonuçların Başarı Durumu:
+        Orta seviyede bağlam bilgisi içerir, ancak bağlam anlayışı yine de kısıtlıdır.
+3. N-grams
+    Temel Özellikler:
+        Kelime veya karakter bazlı n-gramlar oluşturarak bağlam ilişkilerini yakalar.
+    Kullanım Kolaylığı:
+        Orta seviyededir, ancak işlem gücü ve bellek kullanımı artar.
+    Sonuçların Başarı Durumu:
+        Bağlam bilgisi artırılabilir, ancak model karmaşıklığı da artar.
+4. Word Embeddings (GloVe, Word2Vec, FastText)
+    Temel Özellikler:
+        Kelimeleri vektörlere dönüştürerek anlam ilişkilerini yakalar.
+    Kullanım Kolaylığı:
+        Orta seviyededir, önceden eğitilmiş modeller mevcuttur.
+    Sonuçların Başarı Durumu:
+        Yüksek başarı sağlar, bağlamı daha iyi anlar ve semantik ilişkileri yakalayabilir.
+5. Transformers (BERT, GPT-3 vb.)
+    Temel Özellikler:
+        Derin öğrenme temelli çalışır.
+        Bağlamı dikkat mekanizmasıyla detaylı bir şekilde yakalar.
+    Kullanım Kolaylığı:
+        Orta - ileri seviyededir.
+        Yüksek hesaplama gücü gerektirir.
+    Sonuçların Başarı Durumu:
+        Çok yüksek başarı gösterir.
+        Bağlamı derinlemesine anlar ve çeşitli NLP görevlerinde oldukça başarılıdır.
+        Bu tablo, farklı metin temsili yöntemlerinin avantajlarını ve dezavantajlarını karşılaştırarak NLP projelerinde hangi yöntemin seçilmesi gerektiği konusunda yol gösterici olabilir.
+
+
+
