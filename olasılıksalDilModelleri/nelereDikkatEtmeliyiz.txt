@@ -15,8 +15,10 @@ N-Gram modelleri
         bağlamları sınırlıdır n sayısı arttıkca model yavaş calışıyor 
         veri geneksinimi (yüksek n değerleri yüksek verilere ihtiyac duyar)
         
+Gizli markov modelleri
+    bunu araştır
 
-    
+
 
 
 
