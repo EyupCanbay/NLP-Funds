@@ -18,7 +18,17 @@ N-Gram modelleri
 Gizli markov modelleri
     bunu araştır
 
-
+Maximum Entropy Modelleri (MaxEnt)
+    Kullanım
+        MaxEnt modelleri, özellikle sınıflandırma görevlerinde kullanılır.
+        Örneğin, bir cümlenin belirli bir sınıfa (pozitif, negatif duygu gibi) ait olma olasılığını tahmin edebilir.
+    Avantajlar
+        Esneklik
+        İyi genelleme
+    Dezavantajlar
+        Hesaplama maliyetleri
+        Özellik mühendisliği gerektirmesi
+    MaxEnt modelleri genellikle lojistik regresyonun genelleştirilmiş bir versiyonu olarak görülür ve doğrusal ayrımlı veri setlerinde güçlü performans gösterebilir.
 
 
 
