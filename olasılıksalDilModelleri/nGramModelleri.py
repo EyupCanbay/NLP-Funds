@@ -1,10 +1,11 @@
 # import library
+import pandas as pd
 import nltk
 from nltk.util import ngrams  # sklearn da kullanıbilirdim farklılık olsun diye bunu kullandım
 from nltk.tokenize import word_tokenize #tokenizasyon için
 from collections import Counter
 
-#örnek veri seti oluştur
+# örnek veri seti oluştur
 corpus = [
     "I ate apple",
     "I ate sandwich",
