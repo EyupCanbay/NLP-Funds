@@ -570,6 +570,51 @@ Y = tf.keras.utils.to_categorical(Y, num_classes = total_words) # kelimenin tems
 
 
 
+#lstm modelini oluşturulması
+
+
+model = Sequential()
+
+#embedding
+model.add(Embedding(total_words, 50, input_length = X.shape[1]))  #embedding katmanı içeri kelime sayısını, boyut sayısını ve input uzunluğunu veriyorum
+#lstm
+model.add(LSTM(100, return_sequences = False)) #  sadece son cıktıyı döndürmesi için kullanılıyor return_sequences ben bunu istemediğim için false yapıyoruz
+#ilk parametrede 100 noronlu olduğunu söylüyorum
+
+#output
+model.add(Dense(total_words, activation = "softmax"))  # ütün kaleimeli veiryoruz burda ve aktiackson fonkiyonunda binary kalsication yapmadığımız için softmax fonksiyonunu kullancaz
+
+#model compile
+model.compile(optimizer = "adam", loss = "categorical_crossentropy", metrics = ["accuracy"]) #adaptipmoment
+
+#model.training
+model.fit(X,Y,epochs = 150, verbose = 1) #verbose 1 olunca trainingi bize göstericek
 
 
 
+def generate_text(seed_text, next_words):
+    for _ in range(next_words):
+        # girdi metminini sayısal verilere dönüştürmem lazım
+        token_list = tokenizer.texts_to_sequences([seed_text])[0]
+
+
+        #padding
+        token_list = pad_sequences([token_list], maxlen = max_sequence_length - 1 ,padding = "pre")
+
+        #prediction 
+        predicted_probabilities = model.predict(token_list, verbose=1)
+
+        #en yüksek olasılığa sahip kelimenin indexini bulalım
+        predicted_word_index = np.argmax(predicted_probabilities, axis=1)
+
+        #tokenizer ile kelime indexsinden asıl kelimeyiyi bul
+        predicted_word = tokenizer.index_word[predicted_word_index[0]]
+
+        #tahmin edilen kelimeyi seed texte ekle
+        seed_text = seed_text + " " + predicted_word
+
+    return seed_text
+
+
+seed_text = "akşamları "
+print(generate_text(seed_text, 6))
